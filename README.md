@@ -117,7 +117,8 @@ portfolio/
 ### 5. Featured Projects
 - **Gold Loan App (Rupeek)**: Credit Line feature with INR 10M business impact
 - **SmartFarm**: Agri-tech solution with 80-85% efficiency improvement
-- **mWarehouse & AcreSquare**: Secure inventory management with SQLCipher
+- **mWarehouse**: Secure inventory management with SQLCipher encryption
+- **AcreSquare**: GPS-based land measurement and precision agriculture app
 - Project cards with technologies, roles, and GitHub/Play Store links
 
 ### 6. Work Experience
