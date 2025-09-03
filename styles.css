@@ -475,7 +475,9 @@ button {
     width: 330px;
     height: 330px;
     border-radius: 50%;
-    object-fit: cover;
+    object-fit: scale-down;
+    object-position: center;
+    background: var(--white-color);
     border: 5px solid var(--white-color);
 }
 
