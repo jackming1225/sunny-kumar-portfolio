@@ -285,7 +285,7 @@ This portfolio is specifically designed for Sunny Kumar's professional profile. 
 
 For questions about the portfolio implementation or customization:
 
-- **Email**: sunny.kumar@email.com
+- **Email**: sunmeh2525@gmail.com
 - **LinkedIn**: [linkedin.com/in/sunnykumar](https://linkedin.com/in/sunnykumar)
 - **GitHub**: [github.com/sunnykumar](https://github.com/sunnykumar)
 
