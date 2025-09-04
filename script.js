@@ -280,26 +280,46 @@ if (contactForm) {
             return;
         }
         
-        // Simulate form submission
+        // Send WhatsApp message
         const submitButton = this.querySelector('.contact__button');
         const originalText = submitButton.innerHTML;
         
-        submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+        submitButton.innerHTML = '<i class="fab fa-whatsapp"></i> Opening WhatsApp...';
         submitButton.disabled = true;
         
-        // Simulate API call
+        // Create WhatsApp message
+        const whatsappMessage = `Hi Sunny! 👋
+
+*Name:* ${name}
+*Email:* ${email}
+
+*Message:*
+${message}
+
+---
+Sent from your portfolio website`;
+        
+        // Encode message for URL
+        const encodedMessage = encodeURIComponent(whatsappMessage);
+        const whatsappNumber = '918013612277'; // Your WhatsApp number
+        const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+        
+        // Open WhatsApp
         setTimeout(() => {
-            showNotification('Thank you! Your message has been sent successfully. I\'ll get back to you soon.', 'success');
+            window.open(whatsappURL, '_blank');
+            
+            showNotification('WhatsApp opened! Please send the message from WhatsApp.', 'success');
             this.reset();
             submitButton.innerHTML = originalText;
             submitButton.disabled = false;
             
-            // Track form submission
-            trackEvent('contact_form_submit', {
+            // Track WhatsApp submission
+            trackEvent('whatsapp_contact_submit', {
                 name: name,
-                email: email
+                email: email,
+                phone: whatsappNumber
             });
-        }, 2000);
+        }, 1000);
     });
 }
 
